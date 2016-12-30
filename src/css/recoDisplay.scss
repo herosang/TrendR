@@ -1,0 +1,38 @@
+.mainDisplay{
+	width: 300px;
+	height: 400px;
+	display: flex;
+	justify-content:center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.recoMain{
+	width: 200px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+}
+
+.image{
+	width: 100%;
+	opacity: 0.5;
+	height: 400px;
+}
+
+.cardDisplay{
+	position: relative;
+	z-index: 1;
+	box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+
+.infoDisplay{
+	margin-top: 20px;
+	position: relative;
+	z-index: 1000;
+}
+.allDisplay{
+	width: 400px;
+	display: flex;
+	
+}
