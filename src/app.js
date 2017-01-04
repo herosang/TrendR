@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './css/index.scss';
 import RecoDisplay from './components/recoDisplay.js';
-
+import First from './components/first.js'
 
 export default class App extends React.Component {
-  
+
   displayName: 'App';
   props: any;
   constructor(props){
@@ -19,7 +19,7 @@ export default class App extends React.Component {
     return (
 
       <div className = {styles.main}>
-        <RecoDisplay />
+        <First />
       </div>
     );
   }

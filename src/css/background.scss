@@ -1,0 +1,70 @@
+@mixin wave($width, $ms, $margin-top, $margin-left,$color){
+    opacity: .5;
+    position: absolute;
+    width: $width;
+    margin-top: $margin-top;
+    margin-left: $margin-left;
+    transform-origin: 51% 49%;
+    border-radius: 45%;
+    border-color: $color;
+    border-style: solid;
+    background: transparent;
+    -webkit-animation: drift $ms infinite linear;
+}
+
+.wave1{
+    @include wave(250vw,25000ms,-350vh,-70vw,blue);
+    opacity: .1;
+    height: 225vw;
+}
+
+.wave2{
+    @include wave(200vw,20000ms,20vh,-90vw,green);
+    opacity: .4;
+    height: 200vw;
+}
+
+.wave3{
+    @include wave(200vw,10000ms,20vh,-90vw,black);
+    opacity: .4;
+    height: 200vw;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #EF9A9A;
+}
+
+.waves{
+    position: relative;
+    width: 33%;
+    height: 33%;
+    margin-left: 33%;
+    margin-top: 15%;
+    overflow: hidden;
+    background-color: #B71C1C;
+    -webkit-transform: translate3d(0, 0, 0);
+    border-radius: 5px;
+}
+
+.title{
+    position: absolute;
+    text-align: center;
+    font-size: 500%;
+    z-index: 1;
+    margin: 20%;
+}
+
+
+@-webkit-keyframes drift {
+    from { -webkit-transform: rotate(0deg); }
+    from { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes wave-animation{
+
+}
+

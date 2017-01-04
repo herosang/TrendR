@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from "../css/recoDisplay.scss";
-import RecoPart from "./recoPart.js"
-import RecoInfo from "./recoInfo.js"
+import RecoPart from "./recoPart.js";
+import RecoInfo from "./recoInfo.js";
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class RecoDisplay extends React.Component {
-  
+
   displayName: 'RecoDisplay';
   props: any;
   constructor(props){
