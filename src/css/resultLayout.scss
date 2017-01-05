@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+.main {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	align-items: stretch;
+	background-color: #FFF176;
+	height: 100vh;
+}
+
+.sidebar {
+	display: flex;
+	flex: 1;
+	padding: 20px;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-right: 15%;
+}
+
+.rec {
+	margin: 100px;
+	flex: 4;
+	margin-left: 15%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidebarContent {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebarHeader {
+	font-size: 36px;
+	font-weight: 300;
+}
+
+.mainHeader {
+	@extend .sidebarHeader;
+	font-size: 50px;
+}
+
+.trending {
+	margin: 20px;
+}
+
+.weatherContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.weatherInfo {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #FFF;
+	flex: 1;
+	padding: 20px;
+}
+
+.weatherImage {
+	height: 160px;
+	width: 160px;
+	margin: 20px;
+}
+
+.temperature {
+	font-size: 40px;
+}
+
+.additionalInfo {
+	font-weight: 300;
+}
+
+.desc {
+	font-weight: 300;
+	font-size: 24px;
+}
+
+.recList {
+	list-style-type: none;
+}
+
+.recHeader {
+	@extend .sidebarHeader;
+}
+
+.recItem {
+	font-size: 24px;
+	margin: 10px;
+	font-weight: 300;
+}

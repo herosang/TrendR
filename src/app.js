@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './css/index.scss';
 import RecoDisplay from './components/recoDisplay.js';
-import First from './components/first.js'
+import First from './components/first.js';
+import Result from './components/result.js';
 
 export default class App extends React.Component {
 
@@ -14,12 +15,9 @@ export default class App extends React.Component {
 
   //display is just there for test
   render () {
-
-
     return (
-
-      <div className = {styles.main}>
-        <First />
+      <div /*className = {styles.main}*/>
+        <Result />
       </div>
     );
   }
