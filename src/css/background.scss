@@ -1,4 +1,4 @@
-@mixin wave($width, $ms, $margin-top, $margin-left,$color){
+@mixin wave($width, $ms, $margin-top, $margin-left, $color){
     opacity: .5;
     position: absolute;
     width: $width;
@@ -6,28 +6,32 @@
     margin-left: $margin-left;
     transform-origin: 51% 49%;
     border-radius: 45%;
-    border-color: $color;
-    border-style: solid;
-    background: transparent;
+    background-color: $color;
     -webkit-animation: drift $ms infinite linear;
 }
 
 .wave1{
-    @include wave(250vw,25000ms,-350vh,-70vw,blue);
+    @include wave(250vw,25000ms,-200%,-70vw,yellow);
     opacity: .1;
     height: 225vw;
 }
 
 .wave2{
-    @include wave(200vw,20000ms,20vh,-90vw,green);
+    @include wave(200vw,20000ms,30%,-70%,green);
     opacity: .4;
     height: 200vw;
 }
 
 .wave3{
-    @include wave(200vw,10000ms,20vh,-90vw,black);
+    @include wave(200vw,10000ms,30%,-30%,blue);
     opacity: .4;
     height: 200vw;
+}
+
+.wave4{
+     @include wave(200vw,10000ms,30%,-50%,purple);
+     opacity: .4;
+     height: 200vw;
 }
 
 .container{
