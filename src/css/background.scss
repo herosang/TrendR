@@ -8,6 +8,7 @@
     border-radius: 45%;
     background-color: $color;
     -webkit-animation: drift $ms infinite linear;
+    overflow: hidden;
 }
 
 .wave1{
@@ -36,8 +37,7 @@
 }
 
 .container{
-
-    display: flex;
+    position: absolute;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
