@@ -1,5 +1,5 @@
 @mixin wave($width, $ms, $margin-top, $margin-left, $color){
-    opacity: .5;
+    opacity: .4;
     position: absolute;
     width: $width;
     margin-top: $margin-top;
@@ -11,47 +11,52 @@
 }
 
 .wave1{
-    @include wave(250vw,25000ms,-200%,-70vw,yellow);
+    @include wave(250vw,25000ms,-100vh,-70vw,yellow);
     opacity: .1;
     height: 225vw;
 }
 
+
 .wave2{
-    @include wave(200vw,20000ms,30%,-70%,green);
-    opacity: .4;
+    @include wave(200vw,20000ms,50vh,-90vw,#EF6C00);
+    //opacity: .4;
     height: 200vw;
 }
 
 .wave3{
-    @include wave(200vw,10000ms,30%,-30%,blue);
-    opacity: .4;
+    @include wave(200vw,10000ms,50vh,-50vw,#D50000);
+    //opacity: .4;
     height: 200vw;
 }
 
 .wave4{
-     @include wave(200vw,10000ms,30%,-50%,purple);
-     opacity: .4;
+     @include wave(200vw,10000ms,50vh,-10vw,#FFFF00);
+     //opacity: .6;
      height: 200vw;
 }
 
 .container{
-    position: relative;
+
+    display: flex;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-color: #EF9A9A;
+    background-color:#FFF9C4;
+    -webkit-justify-content: center;
+    display: inline-block;
 }
 
-.waves{
-    position: relative;
-    width: 33%;
-    height: 33%;
-    margin-left: 33%;
-    margin-top: 15%;
+.Card{
+    position: fixed;
+
+    width: 50vw;
+    height: 30vh;
+    margin-top : 35vh;
+    margin-left : 25vw;
+    -webkit-justify-content: center;
     overflow: hidden;
-    background-color: #B71C1C;
-    -webkit-transform: translate3d(0, 0, 0);
-    border-radius: 5px;
+
+
 }
 
 .title{
