@@ -17,6 +17,7 @@ export default class RecoPart extends React.Component {
 
     const testStyle = {
       width: "200px",
+      display: "flex",
       opacity: "0.4",
       position: "absolute",
       marginTop: this.state.height*parseFloat(this.props.marginTop)+"px",

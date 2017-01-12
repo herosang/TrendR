@@ -16,8 +16,8 @@ export default class App extends React.Component {
   //display is just there for test
   render () {
     return (
-      <div /*className = {styles.main}*/>
-        <Result />
+      <div className = {styles.main}>
+        <RecoDisplay />
       </div>
     );
   }

@@ -21,18 +21,22 @@
 }
 
 .cardDisplay{
-	position: relative;
-	z-index: 1;
-	box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+	width: 350px;
 }
+
 
 .infoDisplay{
 	margin-top: 20px;
-	position: relative;
-	z-index: 1000;
+	width: 40px;
+	height: 400px;
 }
 .allDisplay{
 	width: 400px;
+	position: relative;
+	z-index: -1;
 	display: flex;
+	box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+
+
 	
 }

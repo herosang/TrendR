@@ -9,8 +9,6 @@ export default class Background extends React.Component{
       <div className={styles.wave2}></div>
       <div className={styles.wave3}></div>
       <div className={styles.wave4}></div>
-      <Card className={styles.Card} zDepth={2} backgroundColor={'#B71C1C'}>
-      </Card>
 		</div>
 		)
 	}

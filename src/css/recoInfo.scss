@@ -1,0 +1,21 @@
+
+
+.cross {
+  width: 20px;
+  height: 20px;  
+  background: 
+  linear-gradient(to bottom, transparent 49%, #FFF 49%, #FFF 51%,  transparent 51%),
+
+  linear-gradient(to right, transparent 49%, #FFF 49%, #FFF 51%, transparent 51%);
+}
+
+
+
+.line{
+	margin-right: 20px;
+	height: 1px;
+	width: 100px;
+	margin-left: -50px;
+	margin-top: 1px;
+	border-top: 1px #A9A9A9	 solid;
+}
