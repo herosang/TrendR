@@ -17,10 +17,14 @@
   "license": "MIT",
   "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
   "dependencies": {
+    "chart.js": "^2.4.0",
+    "express": "^4.14.0",
     "material-ui": "^0.16.6",
+    "mongodb": "^2.2.21",
     "node-sass": "^3.13.0",
-    "react": "15.4.1",
-    "react-dom": "15.4.1",
+    "react": "^15.4.1",
+    "react-chartjs-2": "^2.0.0",
+    "react-dom": "^15.4.1",
     "react-tap-event-plugin": "^2.0.1",
     "sass-loader": "^4.0.2"
   },
