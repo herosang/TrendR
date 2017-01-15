@@ -4,8 +4,8 @@ var util = require('util'),
 var fs = require('fs')
 	
 var opHelper = new OperationHelper({
-    awsId:     'AKIAJJCUJPU5BH53FILQ',
-    awsSecret: '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',
+    awsId:     'idhere',
+    awsSecret: 'secret here',
     assocId:   'trendr02-20',
 	locale: 'CA'
 });
