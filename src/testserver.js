@@ -1,17 +1,26 @@
+var util = require('util'),
+    OperationHelper = require('apac').OperationHelper;
 
-//Server app
-var express = require('express');
-var app = express();
-
-
-app.get('/', function (req, res) {
-    //Get html
-    res.sendFile(__dirname + "/template.html");
+var fs = require('fs')
+	
+var opHelper = new OperationHelper({
+    awsId:     'AKIAJJCUJPU5BH53FILQ',
+    awsSecret: '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',
+    assocId:   'trendr02-20',
+	locale: 'CA'
 });
 
-var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
-   
-   console.log("Example app listening at http://%s:%s", host, port)
+opHelper.execute('ItemSearch', {
+  'SearchIndex': 'All',
+  'Keywords': 'Fashion',
+  'ResponseGroup': 'ItemAttributes,Offers'
+}).then((response) => {
+	fs.writeFile('./test.xml', response.responseBody, (err) => {
+		if(err) console.log(err);
+		console.log("FUCK");
+	});
+    console.log("Results object: ", response.result);
+    console.log("Raw response body: ", response.responseBody);
+}).catch((err) => {
+    console.error("Something went wrong! ", err);
 });
