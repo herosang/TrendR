@@ -12,7 +12,7 @@ if (module && module.hot) {
     const App = require('./app.js').default;
     render(
       <AppContainer>
-    	<MuiThemeProvider>
+    	<MuiThemeProvider>z
         <App/>
     	</MuiThemeProvider>  
       </AppContainer>,

@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 var weather = require("./text.json");
 
 
 
+=======
+import weather from "./text.json";
+>>>>>>> 2dbbdcffca1025688d1246b7a76a09c0a26a68e6
 
 function degrees(num){
 	var val = Math.floor((num/22.5)+.5)
