@@ -1,6 +1,0 @@
-https://api.pinterest.com/oauth/?
-    response_type=code&
-    redirect_uri=https://mywebsite.com/connect/pinterest/&
-    client_id=12345&
-    scope=read_public&
-    state=768uyFys

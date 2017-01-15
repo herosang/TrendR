@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardHeader, CardMedia, CardText} from 'material-ui/Card';
+import { Card } from 'material-ui/Card';
 import Styles from '../css/resultLayout.scss';
 import Paper from 'material-ui/Paper';
 
@@ -9,9 +9,8 @@ class InfoCard extends React.Component {
 		super(props);
 	}
 	render() {
-		console.log(RecoDisplay)
 		return (
-			<Card className={this.props.className} zDepth={1} backgroundColor={'#AAA'}>
+			<Card className={this.props.className} zDepth={1}>
 				<span className={Styles.mainHeader}>{this.props.temp}</span>
 				<div className={Styles.trending}>
 				</div>

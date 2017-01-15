@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './css/index.scss';
 import First from './components/first.js';
 import Result from './components/result.js';
+import WeatherContainer from './components/weatherContainer.js';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Landing from './Components/RealStructure/landing.js';
 import Start from './Components/start.js';
@@ -21,7 +22,6 @@ export default class App extends React.Component {
   getChildContext() {
     return {muiTheme: getMuiTheme()};
   };
-
   //display is just there for test
   render () {
     return (
@@ -31,6 +31,7 @@ export default class App extends React.Component {
             <Route path="main" component={MainPage}/>
           </Route>
       </Router>
+
     );
   }
 }
