@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './css/index.scss';
-import RecoDisplay from './components/recoDisplay.js';
 import First from './components/first.js';
 import Result from './components/result.js';
 import WeatherContainer from './components/weatherContainer.js';

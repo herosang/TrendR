@@ -6,15 +6,11 @@ class WeatherInformation extends React.Component {
 		super(props);
 	}
 	render() {
-		let props = this.props
-		let stuff = [props.temp, props.status, props.wind]
-		let info = stuff.map((item) => {
-			return <span className={Styles.infoItem}>{item}</span>
-		})
-		console.log(info)
 		return (
 			<div className={Styles.info}>
-				{info}
+				<span className={Styles.infoItem}>{this.props.temp}</span>
+				<span className={Styles.infoItem}>{this.props.status}</span>
+				<span className={Styles.infoItem}>{this.props.wind}</span>
 			</div>
 		)
 	}
