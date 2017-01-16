@@ -13,8 +13,12 @@ export default class App extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = { };
+    this.state = {value : 1, start: 0};
   }
+
+	handleDropDownMenu = (event, index, value) => this.setState({value: value});
+
+	start = (event) => this.setState({start : 1});
 
   getChildContext() {
     return {muiTheme: getMuiTheme()};
@@ -23,7 +27,7 @@ export default class App extends React.Component {
   render () {
     return (
       <div className = {styles.main}>
-        <WeatherContainer/>
+        <First currentLocation={this.state.value} handleChange={this.handleDropDownMenu} start={this.start}/>
       </div>
     );
   }
