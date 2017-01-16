@@ -26,7 +26,8 @@ export default class App extends React.Component {
   render () {
     return (
       <div className = {styles.main}>
-        <First currentLocation={this.state.value} handleChange={this.handleDropDownMenu} start={this.start}/>
+      <First currentLocation={this.state.value} handleChange={this.handleDropDownMenu} start={this.start}/>
+      {/*<WeatherContainer />*/}
       </div>
     );
   }

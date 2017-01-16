@@ -13,7 +13,7 @@ var weatherImgLinks = {
 	"Clear Day":            'http://i.imgur.com/CgVrOs4.png',
 	"Snow Night":           'http://i.imgur.com/muYsFnI.png',
 	"Snow Day":             'http://i.imgur.com/Nvw26nY.png',
-	"Cloudy Night":          'http://i.imgur.com/D33TRNK.png',
+	"Cloudy Night":         'http://i.imgur.com/D33TRNK.png',
 	"Cloudy Day":           'http://i.imgur.com/D33TRNK.png',
 	"Thunderstorm Day":     'http://i.imgur.com/Wfm4k41.png',
 	"Thunderstorm Night":   'http://i.imgur.com/buYm0gS.png'
@@ -36,7 +36,7 @@ var getWeatherFromId = (id) => {
 }
 
 var WeatherHeader = (props) => {
-	return <span className={Styles.weatherHeader}>{props.forecast ? "It is currently.." : "It will be.."}</span>
+	return <span className={Styles.weatherHeader}>{props.forecast ? "Now" : "Later"}</span>
 }
 
 var WeatherImage = (props) => {
@@ -58,14 +58,20 @@ export default class WeatherContainer extends React.Component {
 	render() {
 		return (
 			<Paper zDepth={1} className={Styles.weatherContainer}>
-				<WeatherHeader forecast={true} />
-				<WeatherImage status={this.state.status} day={this.state.day}/>
-				<WeatherDisplay 
-				temp={this.state.temp} 
-				status={this.state.status} 
-				wind={this.state.wind.toString() + " " + this.state.windDir}
-				className={Styles.weatherDisplay}
-				/>
+				<div className={Styles.left}>
+					<WeatherHeader forecast={true} className={Styles.weatherHeader}/>
+					<WeatherImage status={this.state.status} day={this.state.day}/>
+				</div>
+				<div className={Styles.right}>
+					<WeatherDisplay 
+					temp={this.state.temp + (this.state.metric ? "°C" : "°F")} 
+					status={this.state.status} 
+					wind={this.state.wind.toString() 
+						+ (this.state.metric ? " km/h " : " mph ") 
+						+ this.state.windDir}
+					className={Styles.weatherDisplay}
+					/>
+				</div>
 			</Paper>
 		)
 	}
