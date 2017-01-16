@@ -6,6 +6,7 @@ import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import Trending from './trending.js';
 
 injectTapEventPlugin();
 
@@ -22,14 +23,21 @@ const materialStyle ={
         alignItems: 'center',
         textAlign: 'center',
 	}
-}
+}	//code with jeff's stuff
+	const data = {
+	image: "http://i.imgur.com/q8BVEaM.png",
+	data: {labels: ['jan','feb'] ,
+			sales: [1, 2]},
+	link: "google.com"
+	}
+
 
 export default class First extends React.Component{
 
 	constructor(props){
 		super(props);
 	}
-
+	
 	render(){
 		return(
 		<div className={styles.container}>
@@ -48,6 +56,8 @@ export default class First extends React.Component{
 					<RaisedButton label="start" onClick={this.props.start}/>
 				</Paper>
 			</div>
+			<Trending data={data} /> //code with jeff's stuff
+			<Trending data={data} />
 			<div className={styles.background}>
 				<Background />
 			</div>

@@ -50,7 +50,7 @@ export default class TrendingDisplay extends React.Component{
     }
 
   render() {
-    var width = this.getWidth(8);
+    var width = this.getWidth(this.data.labels.length-1);
 
     return (
       <div style={{height:500, width:300, overflowX:"scroll"}}>
