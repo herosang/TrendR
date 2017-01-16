@@ -1,11 +1,13 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import Popover from 'material-ui/Popover';
+import TrendingDisplay from './trendingDisplay.js'
 
 const trendingStyle = {
 	position: "relative",
 	height: 100,
-	width: 400
+	width: 400,
+	cursor: "pointer"
 };
 const itemStyle = {
 	position: "absolute",
@@ -21,23 +23,25 @@ const imageStyle = {
     maxWidth: "100%",
     maxHeight: "100%"
 }
-/* what props.data should contain
+/* what should be passed into this.props.data
 
-this.props.data = {
+	const data = {
 	image: "http://i.imgur.com/q8BVEaM.png",
-	data: [],
-	link: "amazon.link.com"
+	data: {labels: ['jan','feb'] ,
+			sales: [1, 2]},
+	link: "google.com"
+	}
 }
 */
 var ItemImage = (props) => {
 	return (
 		<Paper zDepth={1} circle={true} style={itemStyle}>
-			<img src={this.props[image]} style={imageStyle}/>
+			<img src={props.image} style={imageStyle}/>
 		</Paper>
 		)
 };
 
-export default class Trending extends Component {
+export default class Trending extends React.Component {
 	displayName: 'Trending';
 	props: any;
 	constructor(props) {
@@ -67,16 +71,16 @@ export default class Trending extends Component {
 	render() {
 		return (
 			<div>
-			<Paper zDepth={1} style={trendingStyle}>
-				<ItemImage onTouchTap={this.handleTouchTap} />
+			<Paper zDepth={1} style={trendingStyle} onTouchTap={this.handleTouchTap}  >
+				<ItemImage image={this.props.data.image}/>
 				<Popover
           		open={this.state.open}
           		anchorEl={this.state.anchorEl}
-         		anchorOrigin: {"horizontal":"right","vertical":"top"}
-				targetOrigin: {"horizontal":"left","vertical":"top"}
+         		anchorOrigin={{"horizontal":"right", "vertical":"top"}}
+				targetOrigin={{"horizontal":"left", "vertical":"top"}}
           		onRequestClose={this.handleRequestClose}
         		> 
-        		//whatever we want to pop up here
+        		<TrendingDisplay data={this.props.data.data}/>
         		</Popover>
 			</Paper>
 			</div>
