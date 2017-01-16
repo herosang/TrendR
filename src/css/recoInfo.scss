@@ -1,13 +1,27 @@
 
+.please{
+	background: #A9A9A9;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justifyContent: center;
+    alignItems: center;
+    marginLeft: -30px;
+    transition: all 2s;
+}
+
+
 
 .cross {
-  width: 20px;
-  height: 20px;  
-  background: 
-  linear-gradient(to bottom, transparent 49%, #FFF 49%, #FFF 51%,  transparent 51%),
+ 	width: 20px;
+ 	height: 20px;  
+ 	background: 
+ 	linear-gradient(to bottom, transparent 49%, #FFF 49%, #FFF 51%,  transparent 51%),
 
-  linear-gradient(to right, transparent 49%, #FFF 49%, #FFF 51%, transparent 51%);
+ 	linear-gradient(to right, transparent 49%, #FFF 49%, #FFF 51%, transparent 51%);
+ 	transition: all 2s;
 }
+
 
 
 

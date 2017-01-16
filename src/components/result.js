@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from 'material-ui/Card';
 import Styles from '../css/resultLayout.scss';
 import Paper from 'material-ui/Paper';
-import RecoDisplay from './recoDisplay.js';
 
 class InfoCard extends React.Component {
 	// Where the recommendation mannequin could be placed
@@ -14,7 +13,6 @@ class InfoCard extends React.Component {
 			<Card className={this.props.className} zDepth={1}>
 				<span className={Styles.mainHeader}>{this.props.temp}</span>
 				<div className={Styles.trending}>
-					<RecoDisplay />
 				</div>
 
 			</Card>
