@@ -8,9 +8,9 @@ class WeatherInformation extends React.Component {
 	render() {
 		return (
 			<div className={Styles.info}>
-				<span className={Styles.infoItem}>{this.props.temp}</span>
-				<span className={Styles.infoItem}>{this.props.status}</span>
-				<span className={Styles.infoItem}>{this.props.wind}</span>
+				<span className={Styles.infoTemp}>{this.props.temp}</span>
+				<span className={Styles.infoStatus}>{this.props.status}</span>
+				<span className={Styles.infoWind}>{this.props.wind}</span>
 			</div>
 		)
 	}

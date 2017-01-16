@@ -2,15 +2,34 @@
 
 .weatherContainer {
 	display: flex;
+	padding: 0 15px;
+}
+
+.left {
+	display: flex;
 	flex-direction: column;
+}
+
+.weatherHeader {
+	font-size: 28px;
+	display: none;
+}
+
+.right {
+	display: flex;
 }
 
 .info {
 	display: flex;
 	flex-direction: column;
-	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	justify-content: center;
+	margin-left: 20px;
 }
 
-.infoItem {
-	
+.infoTemp {
+	font-size: 24px;
+	font-weight: 400;
 }
+
