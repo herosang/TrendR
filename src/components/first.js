@@ -23,13 +23,7 @@ const materialStyle ={
         alignItems: 'center',
         textAlign: 'center',
 	}
-}	//code with jeff's stuff
-	const data = {
-	image: "http://i.imgur.com/q8BVEaM.png",
-	data: {labels: ['jan','feb'] ,
-			sales: [1, 2]},
-	link: "google.com"
-	}
+}	
 
 
 export default class First extends React.Component{
@@ -56,8 +50,6 @@ export default class First extends React.Component{
 					<RaisedButton label="start" onClick={this.props.start}/>
 				</Paper>
 			</div>
-			<Trending data={data} /> //code with jeff's stuff
-			<Trending data={data} />
 			<div className={styles.background}>
 				<Background />
 			</div>

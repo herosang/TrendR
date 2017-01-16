@@ -4,6 +4,10 @@ import First from './components/first.js';
 import Result from './components/result.js';
 import WeatherContainer from './components/weatherContainer.js';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Landing from './Components/RealStructure/landing.js';
+import Start from './Components/start.js';
+import MainPage from './Components/RealStructure/mainPage.js';
+import { Router, Route, IndexRoute, browserHistory} from 'react-router'
 
 export default class App extends React.Component {
 
@@ -25,10 +29,12 @@ export default class App extends React.Component {
   //display is just there for test
   render () {
     return (
-      <div className = {styles.main}>
-        {/*<First currentLocation={this.state.value} handleChange={this.handleDropDownMenu} start={this.start}/>*/}
-        <WeatherContainer />
-      </div>
+      <Router history={browserHistory}>
+           <Route path="/" component={Start}>
+             <IndexRoute component={Landing} />
+             <Route path="main" component={MainPage}/>
+           </Route>
+       </Router>
     );
   }
 }
