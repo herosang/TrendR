@@ -30,15 +30,17 @@ print(multiply(20, 4));*/
 // 	//db.test.remove(people.next());
 // }
 
-//"C:\Users\Jerry Xu.DESKTOP-FT0T9DF\Documents\TrendR\src\node\test_parse.js"
-function initDB(db_name, collection_name, file_name){
-	db = new Mongo().getDB(db_name);
-	
+//mongo "C:\Users\Jerry Xu.DESKTOP-FT0T9DF\Documents\TrendR\src\node\test_parse.js"
+function addCollection(db, collection_name, file_name){
+	print(file_name);
+
 	//Add all data from a json to a string and give it proper form
 	var file = cat(file_name);
+	//var file = cat("test_parse.json");
 	file = file.replace(/\n/g, ",").substring(0, file.length - 1);
 	file = "[".concat(file, "]");
 
+	//Parse json string and insert objects into database
 	var obj = JSON.parse(file);
 	db.collection_name.insert(obj);
 
@@ -46,12 +48,9 @@ function initDB(db_name, collection_name, file_name){
 	while(list.hasNext()){
 		printjson(list.next());
 	}
-
-	return db;
 }
 
-function emptyDB(db_name, collection_name){
-	db = new Mongo().getDB(db_name);
+function removeCollection(db, collection_name){
 	list = db.collection_name.find();
 
 	while(list.hasNext()){
@@ -66,42 +65,7 @@ function emptyDB(db_name, collection_name){
 //cat() doesn't seem to work for json with more than about 180k lines
 //var file = cat("C:\\Users\\Jerry Xu.DESKTOP-FT0T9DF\\Documents\\TrendR\\src\\node\\city.list.json");
 
-//db = initDB("test", "cities", "C:\\Users\\Jerry Xu.DESKTOP-FT0T9DF\\Documents\\test.json");
-db = initDB("test", "cities", "test_parse.json");
-//emptyDB("test", "cities");
-
-
-// db = new Mongo().getDB("test");
-
-// //cat() doesn't seem to work for json with more than about 180k lines
-// //var file = cat("C:\\Users\\Jerry Xu.DESKTOP-FT0T9DF\\Documents\\TrendR\\src\\node\\city.list.json");
-// var file = cat("C:\\Users\\Jerry Xu.DESKTOP-FT0T9DF\\Documents\\test.json");
-// file = file.replace(/\n/g, ",").substring(0, file.length - 1);
-// file = "[".concat(file, "]");
-
-//printjson(file);
-
-// var obj = JSON.parse(file);
-// db.cities.insert(obj);
-
-// citylist = db.cities.find();
-// for(i = 0; i < 10; i ++){
-// 	if(citylist.hasNext()){
-// 		printjson(citylist.next());
-// 	}
-// 	else{
-// 		print(i);
-// 	}
-// }
-
-
-// db = new Mongo().getDB("test");
-// citylist = db.cities.find();
-
-// while(citylist.hasNext()){
-// 	db.cities.remove(citylist.next());
-// }
-
-// while(citylist.hasNext()){
-// 	printjson(citylist.next());
-// }
+db = new Mongo().getDB("test");
+addCollection(db, "cities", "C:\\Users\\Jerry Xu.DESKTOP-FT0T9DF\\Documents\\TrendR\\src\\node\\test_parse.json");
+// addCollection(db, "cities", "../test_parse.json");
+//removeCollection(db, "cities");
